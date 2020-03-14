@@ -21,7 +21,7 @@ const InfoContainer = styled.div`
 	@media only screen and (max-width: 620px) {
 		right: 8px;
 		top: 46px;
-		width: 130px;
+		width: 140px;
 		height: 110px;
 		padding: 8px;
 	}

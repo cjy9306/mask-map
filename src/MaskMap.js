@@ -92,9 +92,11 @@ const MaskMap = () => {
 
 	useEffect(() => {
 		const container = document.getElementById('map');
+		const defaultLat = 37.555299445604334;
+		const defaultLng = 126.9736589530062;
 		const options = {
 			// 서울역 근처 세팅
-			center: new window.kakao.maps.LatLng(37.555299445604334, 126.9736589530062),
+			center: new window.kakao.maps.LatLng(defaultLat, defaultLng),
 			level: 4
 		};
 
@@ -103,7 +105,7 @@ const MaskMap = () => {
 		const zoomControl = new window.kakao.maps.ZoomControl();
 		map.addControl(zoomControl, window.kakao.maps.ControlPosition.BOTTOMRIGHT);
 
-		markStores(37.555299445604334, 126.9736589530062);
+		markStores(defaultLat, defaultLng);
 		window.kakao.maps.event.addListener(map, 'dragend', async () => {
 			const center = map.getCenter();
 
@@ -112,11 +114,11 @@ const MaskMap = () => {
 	}, []);
 
 	return (
-		<>
+		<div>
 			<Header onSearch={onSearch} onRefresh={onRefresh} />
 			<MapInfo />
 			<MapContainer id="map"></MapContainer>
-		</>
+		</div>
 	);
 };
 
