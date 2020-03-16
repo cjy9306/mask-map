@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import MaskMap from './MaskMap';
+import MaskMap from './components/MaskMap';
 
 function App() {
 	return <MaskMap />;
