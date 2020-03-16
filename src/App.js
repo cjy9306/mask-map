@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import MaskMap from './components/MaskMap';
 
 function App() {
