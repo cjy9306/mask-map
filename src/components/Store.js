@@ -13,8 +13,8 @@ const CustomWrapper = styled.div`
 	border-radius: 4px;
 	background-color: #666666;
 	color: white;
-	margin-bottom: 4px;
 	font-size: 12px;
+	margin-bottom: 4px;
 	padding: 0 4px;
 `;
 

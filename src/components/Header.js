@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFirstAid, faRedo, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const SearchContainer = styled.div`
+	background-color: #3c779f;
+	left: 0;
 	position: fixed;
 	top: 0;
-	left: 0;
 	width: 100%;
-	background-color: #3c779f;
 	z-index: 10;
 
 	@media only screen and (min-width: 621px) {
@@ -21,8 +21,8 @@ const SearchContainer = styled.div`
 `;
 
 const LabelWrapper = styled.div`
-	float: left;
 	color: white;
+	float: left;
 	margin-left: 16px;
 
 	@media only screen and (min-width: 621px) {
@@ -37,10 +37,10 @@ const LabelWrapper = styled.div`
 `;
 
 const ControlWrapper = styled.div`
-	float: right;
-	vertical-align: middle;
 	display: flex;
+	float: right;
 	justify-content: space-between;
+	vertical-align: middle;
 
 	@media only screen and (min-width: 621px) {
 		margin: 10px 12px;
@@ -84,11 +84,11 @@ const SearchButton = styled.button`
 	border: none;
 	border-radius: 4px;
 	box-shadow: none;
-	padding: 0 12px;
 	color: black;
-	text-align: center;
-	line-height: 1.499;
 	cursor: pointer;
+	line-height: 1.499;
+	padding: 0 12px;
+	text-align: center;
 	&:hover {
 		background-color: hsla(0, 0%, 100%, 0.8);
 	}

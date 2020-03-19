@@ -4,38 +4,38 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const InfoContainer = styled.div`
-	position: fixed;
+	background-color: hsla(0, 0%, 100%, 0.8);
 	display: flex;
 	flex-direction: column;
+	position: fixed;
 	z-index: 10;
-	background-color: hsla(0, 0%, 100%, 0.8);
 
 	@media only screen and (min-width: 621px) {
+		height: 150px;
+		padding: 16px;
 		right: 16px;
 		top: 76px;
 		width: 200px;
-		height: 150px;
-		padding: 16px;
 	}
 
 	@media only screen and (max-width: 620px) {
+		height: 110px;
+		padding: 8px;
 		right: 8px;
 		top: 46px;
 		width: 140px;
-		height: 110px;
-		padding: 8px;
 	}
 `;
 
 const MarkerItem = styled.div`
 	@media only screen and (min-width: 621px) {
-		margin-bottom: 16px;
 		font-size: 16px;
+		margin-bottom: 16px;
 	}
 
 	@media only screen and (max-width: 620px) {
-		margin-bottom: 12px;
 		font-size: 12px;
+		margin-bottom: 12px;
 	}
 `;
 
