@@ -160,7 +160,7 @@ const Header = ({ onSearch, onRefresh }) => {
 		<SearchContainer>
 			<LabelWrapper>
 				<LogoIcon icon={faFirstAid} size="xs" alt="새로고침" />
-				Mask Finder
+				Mask Map
 			</LabelWrapper>
 			<ControlWrapper>
 				<RefreshIcon icon={faRedo} size="xs" onClick={onRefresh} />
