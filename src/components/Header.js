@@ -53,7 +53,7 @@ const ControlWrapper = styled.div`
 	}
 `;
 
-const InputField = styled.input`
+const InputField = styled.input.attrs({ type: 'text' })`
 	border: none;
 	box-shadow: none;
 	box-sizing: border-box;
@@ -165,9 +165,15 @@ const Header = ({ onSearch, onRefresh }) => {
 			</LabelWrapper>
 			<ControlWrapper>
 				<RefreshIcon icon={faRedo} size="xs" onClick={onRefresh} />
-				<InputField value={keyword} onChange={onChange} onKeyUp={onKeyUp} placeholder="지역, 건물 등을 검색하세요" />
-				<SearchButton onClick={() => onSearch(keyword)}>
-					<SearchIcon icon={faSearch} size="xs" aria-label="Search" />
+				<InputField
+					name="keyword"
+					value={keyword}
+					onChange={onChange}
+					onKeyUp={onKeyUp}
+					placeholder="지역, 건물 등을 검색하세요"
+				/>
+				<SearchButton onClick={() => onSearch(keyword)} aria-label="Search">
+					<SearchIcon icon={faSearch} size="xs" />
 				</SearchButton>
 			</ControlWrapper>
 		</HeaderContainer>
