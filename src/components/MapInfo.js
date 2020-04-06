@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const InfoContainer = styled.section`
-	background-color: hsla(0, 0%, 100%, 0.8);
+	background-color: hsla(0, 0%, 100%, 0.9);
 	display: flex;
 	flex-direction: column;
 	position: fixed;

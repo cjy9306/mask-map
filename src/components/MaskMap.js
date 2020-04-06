@@ -30,6 +30,7 @@ const MaskMap = () => {
 			const url =
 				'https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/v1/storesByGeo/json?lat=' + lat + '&lng=' + lng + '&m=2000';
 			const result = await (await axios.get(url, { timeout: 10 * 1000 })).data;
+			console.log('result ; ' + result.count);
 			let position = null;
 			let content = '';
 			for (let i = 0; i < result.count; i++) {
