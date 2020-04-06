@@ -40,10 +40,9 @@ const MaskMap = () => {
 				position = new window.kakao.maps.LatLng(result.stores[i].lat, result.stores[i].lng);
 
 				content = renderToString(<Store store={result.stores[i]} key={result.stores[i].code} />);
-				console.log(content);
 				const customOverlay = new window.kakao.maps.CustomOverlay({
 					position,
-					content: content
+					content: content,
 				});
 
 				overlayedStores[result.stores[i].code] = result.stores[i];
@@ -55,7 +54,7 @@ const MaskMap = () => {
 		}
 	};
 
-	const onSearch = keyword => {
+	const onSearch = (keyword) => {
 		if (keyword === '') return;
 
 		const ps = new window.kakao.maps.services.Places();
@@ -105,7 +104,7 @@ const MaskMap = () => {
 		const options = {
 			// 서울역 근처 세팅
 			center: new window.kakao.maps.LatLng(defaultLat, defaultLng),
-			level: 4
+			level: 4,
 		};
 
 		map = new window.kakao.maps.Map(container, options);

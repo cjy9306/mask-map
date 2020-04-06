@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFirstAid, faRedo, faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const SearchContainer = styled.div`
+const HeaderContainer = styled.header`
 	background-color: #3c779f;
 	left: 0;
 	position: fixed;
@@ -146,18 +146,19 @@ const SearchIcon = styled(FontAwesomeIcon)`
 
 const Header = ({ onSearch, onRefresh }) => {
 	const [keyword, setKeyword] = useState('');
-	const onChange = e => {
+	const onChange = (e) => {
 		setKeyword(e.target.value);
 	};
 
-	const onKeyUp = e => {
+	const onKeyUp = (e) => {
+		// enter capture
 		if (e.keyCode === 13) {
 			onSearch(keyword);
 		}
 	};
 
 	return (
-		<SearchContainer>
+		<HeaderContainer>
 			<LabelWrapper>
 				<LogoIcon icon={faFirstAid} size="xs" alt="새로고침" />
 				Mask Map
@@ -166,10 +167,10 @@ const Header = ({ onSearch, onRefresh }) => {
 				<RefreshIcon icon={faRedo} size="xs" onClick={onRefresh} />
 				<InputField value={keyword} onChange={onChange} onKeyUp={onKeyUp} placeholder="지역, 건물 등을 검색하세요" />
 				<SearchButton onClick={() => onSearch(keyword)}>
-					<SearchIcon icon={faSearch} size="xs" />
+					<SearchIcon icon={faSearch} size="xs" aria-label="Search" />
 				</SearchButton>
 			</ControlWrapper>
-		</SearchContainer>
+		</HeaderContainer>
 	);
 };
 

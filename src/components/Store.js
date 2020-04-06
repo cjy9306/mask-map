@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
-const StoreContainer = styled.div`
+const StoreContainer = styled.section`
 	cursor: pointer;
 	text-align: center;
 `;
@@ -19,17 +19,17 @@ const CustomWrapper = styled.div`
 `;
 
 const AddressWrapper = styled(CustomWrapper)`
-	display: ${props => (props.visible ? 'block' : 'none')};
+	display: ${(props) => (props.visible ? 'block' : 'none')};
 `;
 
 const LabelWrapper = styled(CustomWrapper)`
-	background-color: ${props => props.backgroundColor};
-	color: ${props => (props.backgroundColor === '#f2d600' ? 'black' : 'white')};
+	background-color: ${(props) => props.backgroundColor};
+	color: ${(props) => (props.backgroundColor === '#f2d600' ? 'black' : 'white')};
 `;
 
 const MarkerIcon = styled(FontAwesomeIcon)`
 	font-size: 32px;
-	color: ${props => props.color};
+	color: ${(props) => props.color};
 `;
 
 const Store = ({ store }) => {

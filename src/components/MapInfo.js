@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
-const InfoContainer = styled.div`
+const InfoContainer = styled.section`
 	background-color: hsla(0, 0%, 100%, 0.8);
 	display: flex;
 	flex-direction: column;
@@ -40,7 +40,7 @@ const MarkerItem = styled.div`
 `;
 
 const MarkerIcon = styled(FontAwesomeIcon)`
-	color: ${props => props.color};
+	color: ${(props) => props.color};
 
 	@media only screen and (min-width: 621px) {
 		font-size: 24px;
