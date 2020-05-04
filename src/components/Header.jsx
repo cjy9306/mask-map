@@ -144,6 +144,7 @@ const SearchIcon = styled(FontAwesomeIcon)`
 	}
 `;
 
+// MaskMap의 헤더
 const Header = ({ onSearch, onRefresh }) => {
 	const [keyword, setKeyword] = useState('');
 	const onChange = (e) => {

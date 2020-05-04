@@ -53,6 +53,7 @@ const MarkerIcon = styled(FontAwesomeIcon)`
 	}
 `;
 
+// 약국의 마스크의 공통 정보 컴포넌트
 const MapInfo = () => {
 	return (
 		<InfoContainer>

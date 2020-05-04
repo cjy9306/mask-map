@@ -20,11 +20,15 @@ const MapContainer = styled.div`
 	}
 `;
 
+// 중복 체크를 위한 변수들
 let overlayedStores = [];
 let overlayes = [];
 let map = null;
 
+// MaskMap의 메인 컴포넌트
 const MaskMap = () => {
+
+	// 약국 정보들을 map에 마킹
 	const markStores = async (lat, lng) => {
 		try {
 			const url =
@@ -54,6 +58,7 @@ const MaskMap = () => {
 		}
 	};
 
+	// kakao의 공간 검색을 이용하여 지도 중심을 이동
 	const onSearch = (keyword) => {
 		if (keyword === '') return;
 
@@ -87,6 +92,7 @@ const MaskMap = () => {
 		}
 	};
 
+	// 약국 정보 새로고침
 	const onRefresh = async () => {
 		overlayedStores = [];
 		const center = map.getCenter();
@@ -97,6 +103,7 @@ const MaskMap = () => {
 		markStores(center.getLat(), center.getLng());
 	};
 
+	// 렌더링이 끝난 이후 kakao map을 로딩하고. 기본 설정
 	useEffect(() => {
 		const container = document.getElementById('map');
 		const defaultLat = 37.555299445604334;

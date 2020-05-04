@@ -32,6 +32,7 @@ const MarkerIcon = styled(FontAwesomeIcon)`
 	color: ${(props) => props.color};
 `;
 
+// 약국 컴포넌트
 const Store = ({ store }) => {
 	let color = '#666666';
 	if (store.remain_stat === 'plenty') color = '#61bd4f';
