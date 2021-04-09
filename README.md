@@ -1,9 +1,7 @@
 # Mask-Map
-포트폴리오용으로 제작된 Mask 구입처 정보제공 프로젝트입니다.
+Mask 구입처 정보제공 프로젝트입니다.
   
 정부에서 제공하는 마스크 구입 정보 API와 Kakao Map API를 활용하여 제작하였습니다.
-  
-demo: https://maskmap.jaeyong.dev
 
 !! 정부에서 API 정보를 더이상 제공하지 않게 되면, 사이트가 동작하지 않을 수 있습니다.  
 
